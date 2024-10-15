@@ -1,0 +1,37 @@
+<html></html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #f3e7e9, #e3eeff);
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+    <link rel="stylesheet" href="createproject.css">
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen">
+    
+        <div class="text-center">
+            <h1 class="text-2xl font-semibold text-gray-800 mb-8">EaseEvent Projects You Follow</h1>
+            <div class="border-2 border-dashed border-purple-500 rounded-lg p-8 mb-16" id="create-project-container">
+                <div class="flex flex-col items-center justify-center">
+                    <i class="fas fa-plus text-purple-500 text-4xl mb-4"></i>
+                    <button id="create-project-btn" class="text-purple-500"><a href="/EaseEvent/Create new Project/Reception(event)/reception.html">Create new ease-event projec</a>t</button>
+                </div>
+            </div>
+            
+            <h2 class="text-xl font-semibold text-gray-800 mb-8">Archived projects</h2>
+            <div class="flex space-x-8" id="projects-container"></div>
+        </div>
+    
+        <div id="project-details" class="hidden">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Project Details</h2>
+            <p id="project-title" class="text-purple-500 mb-2"></p>
+            <button id="complete-project-btn" class="bg-purple-500 text-white p-2 rounded">Mark as Complete</button>
+        </div>
+    
+        <script src="createproject.js"></script>
+    
+</body>
+</html>

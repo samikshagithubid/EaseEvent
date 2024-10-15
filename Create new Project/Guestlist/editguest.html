@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Guest List</title>
+    <link rel="stylesheet" href="editguest.css">
+</head>
+<body>
+    <!-- Sidebar Start -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="5.png" alt="Logo" class="logo" />
+
+        </div>
+        <div class="menu">
+            <h3 class="app__left-panel-button"><a href="/EaseEvent/index.html">Untitled</a>
+                <span class="bp3-icon-standard bp3-icon-chevron-down app__left-panel-arrow"></span>
+            </h3>
+            <ul>
+                
+                <li class="app__left-panel-category">Venues & Vendors</li>
+                <ul>
+                    <li><a href="/EaseEvent/Create new Project/Reception(event)/reception.html">Event</a></li>
+                    <li><a href="/EaseEvent/Create new Project/allvendor/allvendor.html">My Vendors</a></li>
+                </ul>
+                <li class="app__left-panel-category">Planning Tools</li>
+                <ul>
+                    <li><a href="/EaseEvent/Create new Project/Guestlist/editguest.html">Guest List</a></li>
+                    <li><a href="/EaseEvent/Create new Project/Checklist/checklist.html">Checklist</a></li>
+                    <li><a href="/EaseEvent/Create new Project/Budget/budget.html">Budget</a></li>
+                    <li><a href="/EaseEvent/Create new Project/Event Itinerary/event.html">Event Itinerary</a></li>
+                    <li><a href="/EaseEvent/Create new Project/notes.html">Notes</a></li>
+                    <li><a href="/EaseEvent/Create new Project/Post Event/postevent.html">Post-Event</a></li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+    <!-- Sidebar End -->
+
+    <!-- Main Content Start -->
+    <div class="main-content">
+        <!-- Navbar Start -->
+        <header>
+            <div class="header-content">
+                <h1 style="margin-left:20px;">Find vendor </h1>
+                <div class="user-menu">
+                    <span style="display: block; text-align: center; font-size: 24px; color: #333;">My Projects</span>
+                    <div class="profile-icons">
+                        <div class="user-icon">+</div>
+                         
+                        <div class="profile-options">
+                            <!-- <a href="#">Login</a> | <a href="#">Register</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Navbar End -->
+
+        <main>
+            <section class="guest-list-section">
+                <h1 style="text-align: center;">Event Attendees</h1>
+                <p class="centered-tagline">"Effortlessly Manage Your Guestlist – Every Name, Every Detail, All in One Place!"</p>
+
+                <div class="search-add-container">
+                    <input type="text" id="search-bar" placeholder="Quick search" onkeyup="filterGuests()" />
+                    <button class="add-guest" onclick="document.getElementById('toggle-guest-form').checked = true;">+ Add guest</button>
+                </div>
+
+                <div class="view-options">
+                   
+                    <button class="view-option active">Full table</button>
+                </div>
+
+                <table class="guest-list">
+                    <thead style="background-color: #9e7b92; color: black; border: none; padding: 10px 15px; cursor: pointer;" >
+                        <tr>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Phone Number</th>
+                            <th>Age</th>
+                            <th>Comment</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="guest-list-body">
+                        <tr>
+                            <td contenteditable="true" onblur="saveData()"> Name</td>
+                            <td contenteditable="true" onblur="saveData()">Address</td>
+                            <td contenteditable="true" onblur="saveData()">number</td>
+                            <td contenteditable="true" onblur="saveData()">8</td>
+                            <td contenteditable="true" onblur="saveData()">—</td>
+                            <td><button class="delete-button" onclick="deleteGuest(this)">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td contenteditable="true" onblur="saveData()"> Name</td>
+                            <td contenteditable="true" onblur="saveData()">Address</td>
+                            <td contenteditable="true" onblur="saveData()">number</td>
+                            <td contenteditable="true" onblur="saveData()">8</td>
+                            <td contenteditable="true" onblur="saveData()">—</td>
+                            <td><button class="delete-button" onclick="deleteGuest(this)">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td contenteditable="true" onblur="saveData()"> Name</td>
+                            <td contenteditable="true" onblur="saveData()">Address</td>
+                            <td contenteditable="true" onblur="saveData()">number</td>
+                            <td contenteditable="true" onblur="saveData()">8</td>
+                            <td contenteditable="true" onblur="saveData()">—</td>
+                            <td><button class="delete-button" onclick="deleteGuest(this)">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td contenteditable="true" onblur="saveData()"> Name</td>
+                            <td contenteditable="true" onblur="saveData()">Address</td>
+                            <td contenteditable="true" onblur="saveData()">number</td>
+                            <td contenteditable="true" onblur="saveData()">8</td>
+                            <td contenteditable="true" onblur="saveData()">—</td>
+                            <td><button class="delete-button" onclick="deleteGuest(this)">Delete</button></td>
+                        </tr>
+                    </tbody>
+                    
+                          </table>
+            </section>
+
+            <!-- Guest form (hidden initially) -->
+            <input type="checkbox" id="toggle-guest-form" style="display: none;" />
+            <div id="guest-form-container">
+                <button class="close-button" onclick="document.getElementById('toggle-guest-form').checked = false;">✖</button> <!-- Close button -->
+                <form id="guest-form">
+                    <div class="form-group">
+                        <label for="guest-name">Guest Name</label>
+                        <input type="text" id="guest-name" placeholder="Guest Name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="guest-family">Address</label>
+                        <input type="text" id="guest-family" placeholder="Family Name" required />
+                    </div>
+                    <!-- <div class="form-group">
+                        <label for="guest-rsvp">RSVP</label>
+                        <select id="guest-rsvp">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div> -->
+                    <div class="form-group">
+                        <label for="guest-table">Phone Number</label>
+                        <input type="number" id="guest-table" placeholder="phone number" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="guest-main-course">Age</label>
+                        <input type="number" id="guest-main-course" placeholder="Enter the Age" />
+                    </div>
+                    <!-- <div class="form-group">
+                        <label for="guest-diet">Dietary Restrictions</label>
+                        <input type="text" id="guest-diet" placeholder="Dietary Restrictions" />
+                    </div> -->
+                    <div class="form-group">
+                        <label for="guest-comment">Comment</label>
+                        <input type="text" id="guest-comment" placeholder="Comment" />
+                    </div>
+                    <button type="submit" style="background-color: #9e7b92; color: white; border: none; padding: 10px 15px; cursor: pointer;">Add Guest</button>
+                </form>
+            </div>
+
+            
+        </main>
+    </div>
+    <script src="editguest.js"></script>
+</body>
+</html>

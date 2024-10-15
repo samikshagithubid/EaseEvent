@@ -1,0 +1,112 @@
+/* Container Styling */
+*{
+    background-color: #f7e3f3; 
+}
+.container {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Form Legend */
+legend {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Group Labels */
+.form-group label {
+    font-size: 16px;
+}
+
+/* Input Group Styling */
+.input-group-addon {
+    /* background-color: #9f62c9; */
+    color: white;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.input-group input, 
+.input-group textarea, 
+.input-group select {
+    /* border: 1px solid #9f62c9; */
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: none;
+    background-color: #f8eefb;
+}
+
+/* Input and Select Fields */
+.form-control {
+    border-radius: 0 4px 4px 0;
+    width: 50%;
+    padding: 10px;
+    border: 2px solid;
+    transition: border-color 0.3s ease-in-out;
+    margin-bottom: 10px;
+}
+
+.form-control:focus {
+    /* border-color: #9f62c9; */
+    box-shadow: 0 0 5px rgba(159, 98, 201, 0.3);
+}
+
+/* Success Message */
+.alert-success {
+    /* background-color: #a14dab; */
+    /* color: white; */
+    border-radius: 4px;
+    border: none;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Radio Buttons */
+.radio label {
+    /* color: #9f62c9; */
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+    margin-bottom: 15px;
+}
+
+/* Submit Button */
+.btn-warning {
+    /* background-color: #9f62c9; */
+    background: linear-gradient(282deg, #9f62c9, #a14dab);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-warning:hover {
+    /* background-color: #a14dab; */
+    background: linear-gradient(282deg, #b85de2, #938395);
+}
+
+/* Placeholder Colors */
+.form-control::placeholder {
+    /* color: #9f62c9; */
+}
+
+/* Form Container Padding */
+.inputGroupContainer {
+    margin-bottom: 15px;
+}
+
+/* Adjust select fields */
+.selectContainer select {
+    border-radius: 4px;
+    padding: 10px;
+}
+
+/* Add spacing between form and bottom of the container */
+form {
+    padding-bottom: 20px;
+}
